@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Rotation Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Volleyball Rotation</h1>
+    <div id="scoreboard">
+        <div>Team A: <span id="scoreA">00</span></div>
+        <div>Team B: <span id="scoreB">00</span></div>
+    </div>
+    <div id="court">
+        <div class="team" id="teamA">
+            <div class="position" id="pa1">A1</div>
+            <div class="position" id="pa2">A2</div>
+            <div class="position" id="pa3">A3</div>
+            <div class="position" id="pa4">A4</div>
+            <div class="position" id="pa5">A5</div>
+            <div class="position" id="pa6">A6</div>
+        </div>
+        <div class="net"></div>
+        <div class="team" id="teamB">
+            <div class="position" id="pb1">B1</div>
+            <div class="position" id="pb2">B2</div>
+            <div class="position" id="pb3">B3</div>
+            <div class="position" id="pb4">B4</div>
+            <div class="position" id="pb5">B5</div>
+            <div class="position" id="pb6">B6</div>
+        </div>
+    </div>
+    <div id="controls">
+        <button onclick="rotateTeam('A')">Rotate Team A</button>
+        <button onclick="rotateTeam('B')">Rotate Team B</button>
+        <button onclick="addScore('A')">Add Score Team A</button>
+        <button onclick="addScore('B')">Add Score Team B</button>
+    </div>
+    <div id="userInput">
+        <h2>Predict Positions</h2>
+        <div id="userCourt">
+            <div class="team" id="userTeamA">
+                <div class="position" id="upa1"></div>
+                <div class="position" id="upa2"></div>
+                <div class="position" id="upa3"></div>
+                <div class="position" id="upa4"></div>
+                <div class="position" id="upa5"></div>
+                <div class="position" id="upa6"></div>
+            </div>
+            <div class="net"></div>
+            <div class="team" id="userTeamB">
+                <div class="position" id="upb1"></div>
+                <div class="position" id="upb2"></div>
+                <div class="position" id="upb3"></div>
+                <div class="position" id="upb4"></div>
+                <div class="position" id="upb5"></div>
+                <div class="position" id="upb6"></div>
+            </div>
+        </div>
+        <div id="playerPool">
+            <div class="player" draggable="true" id="A1">A1</div>
+            <div class="player" draggable="true" id="A2">A2</div>
+            <div class="player" draggable="true" id="A3">A3</div>
+            <div class="player" draggable="true" id="A4">A4</div>
+            <div class="player" draggable="true" id="A5">A5</div>
+            <div class="player" draggable="true" id="A6">A6</div>
+            <div class="player" draggable="true" id="B1">B1</div>
+            <div class="player" draggable="true" id="B2">B2</div>
+            <div class="player" draggable="true" id="B3">B3</div>
+            <div class="player" draggable="true" id="B4">B4</div>
+            <div class="player" draggable="true" id="B5">B5</div>
+            <div class="player" draggable="true" id="B6">B6</div>
+        </div>
+        <button onclick="checkPositions()">Check Positions</button>
+    </div>
+    <div id="feedback"></div>
+    <script src="script.js"></script>
+</body>
+</html>
